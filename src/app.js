@@ -1,11 +1,18 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
+let pronoun = [ "the ", "our " ];
+let adjective = [ "best ", "awsome " ];
+let noun = [ "world", "house" ];
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+const createTheBestCode = (pronounList, adjectiveList, nounList) => {
+  let state = [];
+  pronounList.forEach( (firstWord) => {
+    const mixedCombinations = adjectiveList.map( (secondWord) => {
+      const mixedCombinations2 = nounList.map( (thirdWord) => {
+        return `${firstWord}${secondWord}${thirdWord}`} );
+      state = [...state, ...mixedCombinations2];
+      })
+  })
+  console.log(state);
+}
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
+createTheBestCode(pronoun, adjective, noun);
+
