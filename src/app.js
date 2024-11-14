@@ -9,10 +9,10 @@ const createTheBestCode = (pronounList, adjectiveList, nounList) => {
       const mixedCombinations2 = nounList.map( (thirdWord) => {
         return `${firstWord}${secondWord}${thirdWord}`} );
       state = [...state, ...mixedCombinations2];
-      })
-  })
+      });
+  });
   console.log(state);
-}
+};
 
 createTheBestCode(pronoun, adjective, noun);
 
